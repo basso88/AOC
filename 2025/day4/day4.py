@@ -28,6 +28,7 @@ for i, rack in enumerate(racks):
             if neighbor_count < 4:
                 rolls_count += 1
 print(rolls_count)
+                
 
         
 
