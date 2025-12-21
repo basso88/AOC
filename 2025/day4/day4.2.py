@@ -10,13 +10,17 @@ for rack in racks:
         paper_list.append(paper)
     rack_list.append(paper_list)
 
-for i, rack in enumerate(rack_list):
+shrink = True
+while shrink:
+    shrink = False
+    removed_rolls_list = []
+    for i, rack in enumerate(rack_list):
         for j, paper in enumerate(rack):
         
-            if rack_list[i][j] == "@":
-                neighbor_count = 0
                     
+            if rack_list[i][j] == "@":
         
+                neighbor_count = 0
                 for h in range(-1, 2):
                     if i+h < 0 or i+h > len(racks)-1:
                         continue
@@ -31,6 +35,15 @@ for i, rack in enumerate(rack_list):
                             
             
                 if neighbor_count < 4:
+                    removed_rolls_list.append((i,j))
                     rolls_count += 1
+                    shrink = True
+                
+    
+    for i,j in removed_rolls_list:
+        rack_list[i][j] = "."
+
+                        
 print(rolls_count)
+#print(removed_rolls_list)
                 
