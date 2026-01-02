@@ -29,7 +29,7 @@ while merge:
                 
 
             elif splitted_range_list[n][1] >= splitted_range_list[n+1][0]:
-                merged_range = [splitted_range_list[n][0], max(splitted_range_list[n+1][1], splitted_range_list[n][1])] 
+                merged_range = [splitted_range_list[n][0], max(splitted_range_list[n+1][1], splitted_range_list[n][1])] #merged_range goes from the left edge of the range [n][0] to the biggest between [n][1] and [n+1][1]
                 merged_ranges_list.append(merged_range)
                 merge = True
                 n+=1
