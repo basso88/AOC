@@ -9,7 +9,6 @@ for row in problems_rows:
     problems_list.append(p)
 
 
-
 results_list=[]
 for p in range(len(problems_list[0])):
     res = 0
