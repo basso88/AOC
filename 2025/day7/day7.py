@@ -36,16 +36,3 @@ for i in range(len(diagram_list)):
                     split_count += 1
 
 print(split_count)
-
-
-
-                
-            
-
-
-            
-
-            
-            
-    
-
